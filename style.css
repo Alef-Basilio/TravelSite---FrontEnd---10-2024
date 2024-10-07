@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(235, 235, 235);
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    width: 75vw;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.intro {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    width: 100%;
+}
+
+.introBackground {
+    z-index: 1;
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    background-image: url("./images/bg1.jfif");
+    background-size: cover;
+    background-position-y: -150px;
+    background-repeat: no-repeat;
+}
+
+.introContent {
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 75vw;
+    top: 90px;
+}
+
+.tour {
+    display: flex;
+    justify-content: center;
+}
+
+.tourContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 75vw;
+}
+
+.places {
+    display: flex;
+    justify-content: center;
+    background-image: url("./images/bg2.jpg");
+    background-size: cover;
+    background-position-y: top;
+    background-repeat: no-repeat;
+}
+
+.placesContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 75vw;
+}
+
+.placesItems div {
+    display: flex;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+}
+
+.carouselContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 75vw;
+}
+
+footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+}
+
+.footerBackground {
+    z-index: 1;
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    background-image: url("./images/bg3.jpg");
+    background-size: cover;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+
+.footerContent {
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 75vw;
+    bottom: 90px;
+}
