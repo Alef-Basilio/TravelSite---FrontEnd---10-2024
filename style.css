@@ -11,9 +11,18 @@ body {
 .navbar {
     display: flex;
     justify-content: center;
+    height: fit-content;
+    width: 100%;
+    font-size: 25px;
 }
 
 .menu {
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
     width: 75vw;
 }
 
@@ -21,7 +30,24 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     list-style: none;
+}
+
+.menu ul * {
+    text-decoration: none;
+    color: black;
+}
+
+.menuPrincipal a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menuPrincipal img {
+    height: 60px;
+    width: 50px;
 }
 
 .intro {
@@ -43,31 +69,107 @@ body {
     background-repeat: no-repeat;
 }
 
+.introTitle {
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 75vw;
+    top: 150px;
+    font-size: 100px;
+    opacity: 0.5;
+}
+
 .introContent {
     z-index: 2;
     position: absolute;
     display: flex;
     justify-content: center;
     width: 75vw;
-    top: 90px;
+    top: 190px;
+    gap: 5px;
+}
+
+.introCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+    background-color: aliceblue;
+}
+
+.introContent img {
+    height: 170px;
+    width: 240px;
+}
+
+.introCard h2, .introCard h3 {
+    display: flex;
+    justify-content: center;
+}
+
+.cardsComplement {
+    display: flex;
+}
+
+.cardsComplement * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .tour {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 600px;
 }
 
 .tourContent {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
     width: 75vw;
+}
+
+.tourContent img {
+    height: 400px;
+    width: 320px;
+    border: 5px solid white;
+}
+
+.tourDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 5px;
+}
+
+.tourDescription p {
+    width: 100%;
+    text-align: left;
+}
+
+.tourTopics {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.tourButton {
+    display: flex;
+    justify-content: space-between;
+    background-color: red;
+    gap: 5px;
 }
 
 .places {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 700px;
     background-image: url("./images/bg2.jpg");
     background-size: cover;
     background-position-y: top;
@@ -78,26 +180,193 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
     width: 75vw;
 }
 
-.placesItems div {
+.placesContent h2 {
+    font-size: 150px;
+}
+
+.placesAllItems {
+    background-color: aliceblue;
+    padding: 20px;
+    padding-right: 0;
+    border-right: 3px solid rebeccapurple;
+}
+
+.placesItem {
     display: flex;
 }
 
-.carousel {
-    display: flex;
-    justify-content: center;
+.placesItem img {
+    height: 200px;
+    width: 300px;
 }
 
-.carouselContent {
+.placesTitleSpace {
+    display: flex;
+    justify-content: space-between;
+}
+
+.placesTitleSpace span {
+    background-color: blueviolet;
+}
+
+.placesButton {
+    display: flex;
+    justify-content: space-between;
+    background-color: red;
+    gap: 5px;
+}
+
+.collectionSection {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    margin: 0 auto;
+}
+
+.collectionContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    height: fit-content;
     width: 75vw;
+    font-size: 18px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    gap: 20px;
+}
+
+.costContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.costContent h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.collection-wrapper {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    height: fit-content;
+    width: 100%;
+    overflow-y: visible;
+    overflow-x: hidden;
+}
+
+.arrow-left, .arrow-right {
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    min-width: 40px;
+    font-size: 40px;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.item:hover ~ .arrow-left, .arrow-right {
+    border: 1px solid white;
+}
+
+.arrow-right {
+    right: 14vw;
+}
+
+.collection {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding-left: 45px;
+    padding-right: 45px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    gap: 15px;
+}
+
+.collection-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width: 250px;
+    flex-shrink: 0;
+    opacity: 0.5;
+    color: black;
+    transition: all 600ms ease-in-out;
+    padding: 15px;
+    border: 5px solid black;
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+.item:hover {
+    background-color: black;
+    color: #fff;
+    transition: all 200ms ease-in-out;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    height: 100%;
+}
+
+.links ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.current-item {
+    height: 550px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.complement {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.complement p {
+    margin: 0;
+    margin-top: 5px;
 }
 
 footer {
@@ -125,5 +394,20 @@ footer {
     display: flex;
     justify-content: center;
     width: 75vw;
-    bottom: 90px;
+    bottom: 60px;
+}
+
+.footerContent div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    height: 100px;
+    width: 120px;
+}
+
+.footerContent div div {
+    position: absolute;
+    background-color: green;
+    bottom: 10px;
 }
