@@ -219,11 +219,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 700px;
+    height: fit-content;
     background-image: url("./images/bg2.jpg");
     background-size: cover;
     background-position-y: top;
     background-repeat: no-repeat;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .placesContent {
@@ -235,38 +237,76 @@ body {
 
 .placesContent h2 {
     font-size: 150px;
+    color: white;
 }
 
 .placesAllItems {
+    width: fit-content;
     background-color: aliceblue;
-    padding: 20px;
+    padding: 15px;
     padding-right: 0;
     border-right: 3px solid rebeccapurple;
 }
 
 .placesItem {
     display: flex;
+    height: fit-content;
+}
+
+.placesItem:nth-child(2) {
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .placesItem img {
-    height: 200px;
+    height: 300px;
     width: 300px;
 }
 
-.placesTitleSpace {
+.placesItemContent {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    padding: 20px;
+    padding-right: 0;
 }
 
-.placesTitleSpace span {
-    background-color: blueviolet;
+.placesTitleSpace div {
+    display: flex;
+    gap: 25px;
+}
+
+.placesTitleSpace h3 {
+    width: 100%;
+    font-size: 30px;
+}
+
+.placesTitleSpace div h4:nth-child(1) {
+    color: yellow;
+}
+
+.placesTitleSpace div h4:nth-child(2) {
+    color: red;
+}
+
+.placesTitleSpace div h4:nth-child(3) {
+    color: green;
 }
 
 .placesButton {
     display: flex;
     justify-content: space-between;
     background-color: red;
-    gap: 5px;
+    width: 150px;
+    padding: 5px;
+}
+
+.placesAdvice {
+    background-color: blueviolet;
+    height: fit-content;
+    color: white;
+    padding: 3px;
+    margin-top: 25px;
 }
 
 .collectionSection {
@@ -274,7 +314,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 160px;
 }
 
 .collectionContent {
@@ -285,8 +326,6 @@ body {
     height: fit-content;
     width: 75vw;
     font-size: 18px;
-    padding-top: 60px;
-    padding-bottom: 60px;
     gap: 20px;
 }
 
@@ -343,6 +382,7 @@ body {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+    height: 550px;
     padding-left: 45px;
     padding-right: 45px;
     margin-top: 10px;
