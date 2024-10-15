@@ -1,38 +1,33 @@
 const collection = document.querySelector(".collection");
 
-export function addCollectionItems(h3Text, h4Text, aText, aHref) {
+export function addCollectionItems(imgSrc, h4Text, h2Text, pText) {
     const item = document.createElement("div");
+    const img = document.createElement("img");
     const title = document.createElement("div");
-    const links = document.createElement("div");
-    const ul = document.createElement("ul");
-    const h3 = document.createElement("h3");
+    const text = document.createElement("div");
+    const h2 = document.createElement("h2");
     const h4 = document.createElement("h4");
+    const p = document.createElement("p");
 
+    img.classList.add("image");
     item.classList.add("item");
     title.classList.add("title");
-    links.classList.add("links");
+    text.classList.add("text");
 
-    h3.textContent = h3Text;
+    img.src = imgSrc;
+    h2.textContent = h2Text;
     h4.textContent = h4Text;
+    text.textContent = pText;
 
-    title.appendChild(h3);
     title.appendChild(h4);
+    title.appendChild(h2);
+    text.appendChild(p);
 
-    for (let i = 0; i < aText.length; i++) {
-        const a = document.createElement("a");
-        const li = document.createElement("li");
-        a.href = aHref[i];
-        a.target = "_blank";
-        a.textContent = aText[i];
-        li.appendChild(a);
-        ul.appendChild(li);
-    }
-
-    links.appendChild(ul);
+    item.appendChild(img);
     item.appendChild(title);
-    item.appendChild(links);
+    item.appendChild(text);
 
     collection.childElementCount === 0 ? item.classList.add("current-item") : "";
-
+    
     collection.appendChild(item);
 }
