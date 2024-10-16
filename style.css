@@ -46,7 +46,7 @@ body {
     align-items: center;
     width: 75vw;
 	-webkit-animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
-	        animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+	animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 }
 
 .menu ul {
@@ -78,8 +78,9 @@ body {
     align-items: center;
 }
 
-.menuPrincipalLetter {
-    font-size: 75px;
+.menuPrincipalIcon {
+    height: auto;
+    width: 60px;
 }
 
 .intro {
@@ -106,20 +107,20 @@ body {
 
 @keyframes kenburns-top {
     0% {
-      -webkit-transform: scale(1) translateY(0);
-              transform: scale(1) translateY(0);
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
       -webkit-transform-origin: 50% 16%;
               transform-origin: 50% 16%;
     }
     50% {
-      -webkit-transform: scale(1.05) translateY(-15px);
-              transform: scale(1.05) translateY(-15px);
+      -webkit-transform: translateY(-15px);
+              transform: translateY(-15px);
       -webkit-transform-origin: top;
               transform-origin: top;
     }
     100% {
-        -webkit-transform: scale(1) translateY(0);
-                transform: scale(1) translateY(0);
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
         -webkit-transform-origin: 50% 16%;
                 transform-origin: 50% 16%;
       }
@@ -161,9 +162,17 @@ body {
     position: absolute;
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 580px;
     width: 75vw;
     top: 390px;
     gap: 5px;
+    transition: 0.1s;
+}
+
+.introContent:hover {
+    gap: 0;
+    transition: 0.1s;
 }
 
 .introCard {
@@ -174,14 +183,24 @@ body {
     height: 540px;
     width: 500px;
     background-color: aliceblue;
-    padding-top: 10px;
+    margin: 0;
     border-bottom: 5px solid black;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    transition: 1s;
+}
+
+.introCard:hover {
+    height: 580px;
+    max-width: 500px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: 0.5s;
 }
 
 .introCardContent {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 580px;
     width: 80%;
 }
 
@@ -278,9 +297,23 @@ body {
     display: flex;
     justify-content: space-between;
     background-color: red;
-    width: 140px;
+    height: 50px;
+    width: 240px;
     padding: 8px;
     gap: 5px;
+}
+
+.tourButton img {
+    height: 100%;
+    width: auto;
+    border: none;
+    margin: 0;
+    transition: 2s;
+}
+
+.tourButton:hover img {
+    margin-left: 35%;
+    transition: 2s;
 }
 
 .places {
@@ -294,6 +327,7 @@ body {
     background-repeat: no-repeat;
     padding-top: 40px;
     padding-bottom: 40px;
+    transition: 1s;
 }
 
 .placesContent {
@@ -321,6 +355,20 @@ body {
     height: fit-content;
 }
 
+.placesDescription {
+    display: none;
+}
+
+.placesItem:hover .placesDescription  {
+    display: block;
+    transition: 1s;
+}
+
+.placesItem:hover img {
+    height: 400px;
+    transition: 1s;
+}
+
 .placesItem:nth-child(2) {
     padding-top: 25px;
     padding-bottom: 25px;
@@ -328,7 +376,9 @@ body {
 
 .placesItem img {
     height: 300px;
-    width: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    transition: 1s;
 }
 
 .placesItemContent {
@@ -423,7 +473,7 @@ body {
 }
 
 .arrow-left, .arrow-right {
-    z-index: 2;
+    z-index: 3;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -465,7 +515,7 @@ body {
 .item {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     height: 300px;
     width: 400px;
@@ -474,29 +524,35 @@ body {
     color: black;
     transition: all 600ms ease-in-out;
     padding: 15px;
-    border: 5px solid black;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     border-radius: 10px;
     pointer-events: none;
-}
-
-.item:hover {
-    background-color: black;
-    color: #fff;
-    transition: all 200ms ease-in-out;
+    transition: 1s;
 }
 
 .image {
-    display: none;
+    /*display: none;*/
+    z-index: 2;
+    height: 210px;
+    width: 100%;
     background-size: cover;
     background-position-y: center;
     background-repeat: no-repeat;
 }
 
 .title {
+    z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    background-color: rgb(235, 235, 235);
+}
+
+.text {
+    z-index: 1;
+    display: none;
 }
 
 .links {
@@ -519,13 +575,34 @@ body {
     height: 500px;
     opacity: 1;
     pointer-events: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 0.7s;
 }
 
-.current-item .image {
+/*.current-item .image {
     display: block;
     height: 210px;
     width: 100%;
+}*/
+
+.current-item .text {
+    display: block;
+	-webkit-animation: slide-in-blurred-top 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+	animation: slide-in-blurred-top 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 }
+
+@keyframes slide-in-blurred-top {
+    0% {
+      -webkit-transform: translateY(-250px) ;
+              transform: translateY(-250px) ;
+      height: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0) ;
+              transform: translateY(0) ;
+      height: fit-content;
+    }
+  }
 
 .complement {
     display: flex;
@@ -574,11 +651,12 @@ footer {
     align-items: center;
     background-color: aliceblue;
     height: 100px;
-    width: 120px;
+    width: 20%;
 }
 
-.footerContent div div {
+.footerContent div li {
     position: absolute;
     background-color: green;
     bottom: 10px;
+    width: 20%;
 }
