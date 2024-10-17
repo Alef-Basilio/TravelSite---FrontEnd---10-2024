@@ -1,6 +1,6 @@
-const collection = document.querySelector(".collection");
+const collection = document.querySelector(".collectionAllItems");
 
-export function addCollectionItems(imgSrc, h4Text, h2Text, pText) {
+export function collectionItem(imgSrc, h4Text, h2Text, pText) {
     const item = document.createElement("div");
     const img = document.createElement("img");
     const title = document.createElement("div");
@@ -10,11 +10,12 @@ export function addCollectionItems(imgSrc, h4Text, h2Text, pText) {
     const p = document.createElement("p");
 
     img.classList.add("image");
-    item.classList.add("item");
+    item.classList.add("collectionItem");
     title.classList.add("title");
     text.classList.add("text");
 
     img.src = imgSrc;
+    img.alt = h2Text + " " + "event image";
     h2.textContent = h2Text;
     h4.textContent = h4Text;
     text.textContent = pText;

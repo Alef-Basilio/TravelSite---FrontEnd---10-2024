@@ -1,0 +1,80 @@
+.tour {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    margin-top: 500px;
+    margin-bottom: 100px;
+}
+
+.tourContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75vw;
+}
+
+.tourContent img {
+    height: 450px;
+    width: 320px;
+    border: 5px solid white;
+    margin-right: 30px;
+}
+
+.tourDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    height: 450px;
+    width: 45%;
+    gap: 20px;
+}
+
+.tourDescription h2 {
+    font-size: 45px;
+}
+
+.descriptionTopics {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.descriptionTopics div {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 25%;
+    background-color: chocolate;
+    padding: 10px;
+}
+
+.tourDescription p {
+    width: 100%;
+    text-align: left;
+}
+
+.tourButton {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    width: 240px;
+    background-color: red;
+    padding: 8px;
+    gap: 5px;
+}
+
+.tourButton img {
+    height: 100%;
+    width: auto;
+    transition: 2s;
+    border: none;
+    margin: 0;
+}
+
+.tourButton:hover img {
+    transition: 2s;
+    margin-left: 35%;
+}

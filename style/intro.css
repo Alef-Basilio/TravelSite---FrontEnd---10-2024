@@ -1,0 +1,176 @@
+.intro {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 100%;
+}
+
+.introBackground {
+    z-index: 1;
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    background-image: url("../images/bg1.jfif");
+    background-size: cover;
+    background-position-y: -150px;
+    background-position-x: center;
+    background-repeat: no-repeat;
+	-webkit-animation: motion-simulation 10s ease-out infinite both;
+    animation: motion-simulation 10s ease-out infinite both;
+}
+
+.introTitle {
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    font-size: 180px;
+    -webkit-animation: focus-in-focus-out 2.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	animation: focus-in-focus-out 2.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    cursor: pointer;
+}
+
+.introTitle:hover {
+	opacity: 1 !important;
+}
+
+.introContent {
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 75vw;
+    top: 390px;
+    gap: 5px;
+    overflow-y: visible;
+}
+
+.introCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: 31%;
+    transition: 0.2s;
+    margin: 0;
+}
+
+.introCard:hover {
+    transition: 0.2s;
+    margin-top: 65px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.introCardPointed {
+    height: 0;
+    width: 100%;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%, 50% 100%);
+    background-color: white;
+    transition: 0.2s;
+}
+
+.introCard:hover .introCardPointed {
+    height: 80px;
+    transition: 0.2s;
+}
+
+.introCardContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: fit-content;
+    background-color: white;
+    transition: 0.2s;
+    padding-bottom: 20px;
+}
+
+.introCard:hover .introCardContent {
+    background-color: white;
+    transition: 0.2s;
+    padding-top: 15px;
+}
+
+.introCard img {
+    height: 250px;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.cardText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    height: 230px;
+    width: 80%;
+}
+
+.cardText h2, .cardText h3 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.cardText h3 {
+    padding-bottom: 0;
+}
+
+.cardComplement {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    height: 100%;
+    width: 100%;
+}
+
+.cardComplement div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 47%;
+}
+
+@keyframes motion-simulation {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-transform-origin: 50% 16%;
+        transform-origin: 50% 16%;
+    }
+    50% {
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-transform-origin: 50% 16%;
+        transform-origin: 50% 16%;
+      }
+}
+
+@keyframes focus-in-focus-out {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+    60% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}

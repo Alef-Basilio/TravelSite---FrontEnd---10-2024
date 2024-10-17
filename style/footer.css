@@ -1,0 +1,55 @@
+footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+}
+
+.footerContent {
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 75vw;
+    bottom: 60px;
+}
+
+.footerContent a, .footerContent div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 20%;
+    background-color: aliceblue;
+}
+
+#footerPrincipal {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    width: inherit;
+    background-color: green;
+    transition: 0.5s;
+    bottom: 10px;
+}
+
+#footerPrincipal:hover {
+    transition: 0.5s;
+    bottom: 15px;
+}
+
+.footerBackground {
+    z-index: 1;
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    background-image: url("../images/bg3.jpg");
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,112 @@
+.places {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    background-image: url("../images/bg2.jpg");
+    background-size: cover;
+    background-position-y: top;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    transition: 1s;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.placesContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75vw;
+}
+
+.placesContent h2 {
+    font-size: 150px;
+    color: white;
+}
+
+.placesAllItems {
+    width: fit-content;
+    background-color: aliceblue;
+    padding: 15px;
+    padding-right: 0;
+    border-right: 3px solid rebeccapurple;
+}
+
+.placesItem {
+    display: flex;
+    height: fit-content;
+}
+
+.itemImage {
+    height: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    transition: 1s;
+}
+
+.placesItem:hover .itemImage {
+    height: 400px;
+    transition: 1s;
+}
+
+.placesDescription_2 {
+    display: none;
+}
+
+.placesItem:hover .placesDescription_2  {
+    display: block;
+    transition: 1s;
+}
+
+.placesItemContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    padding-right: 0;
+}
+
+.placesTitleSpace h3 {
+    width: 100%;
+    font-size: 30px;
+}
+
+.placesTitleSpace div {
+    display: flex;
+    gap: 25px;
+}
+
+.placesTitleSpace div h4:nth-child(1) {
+    color: yellow;
+}
+
+.placesTitleSpace div h4:nth-child(2) {
+    color: red;
+}
+
+.placesTitleSpace div h4:nth-child(3) {
+    color: green;
+}
+
+.placesButton {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    width: 240px;
+    background-color: red;
+    padding: 8px;
+}
+
+.placesButton img {
+    height: 100%;
+    width: auto;
+}
+
+.placesAdvice {
+    height: fit-content;
+    color: white;
+    background-color: blueviolet;
+    padding: 3px;
+    margin-top: 25px;
+}

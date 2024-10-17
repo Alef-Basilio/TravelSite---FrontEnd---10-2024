@@ -2,7 +2,7 @@ let currentItem = 0;
 
 setTimeout(() => {
     const controls = document.querySelectorAll(".control");
-    const items = document.querySelectorAll(".item");
+    const items = document.querySelectorAll(".collectionItem");
     
     const maxItems = items.length;
 
