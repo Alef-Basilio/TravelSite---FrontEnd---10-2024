@@ -12,6 +12,8 @@ footer {
     display: flex;
     justify-content: center;
     width: 75vw;
+    font-size: 18px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     bottom: 60px;
 }
 
@@ -21,7 +23,10 @@ footer {
     align-items: center;
     height: 100px;
     width: 20%;
+    text-decoration: none;
+    color: black;
     background-color: aliceblue;
+    border-radius: 2px;
 }
 
 #footerPrincipal {
@@ -32,8 +37,12 @@ footer {
     align-items: center;
     height: inherit;
     width: inherit;
+    color: white;
     background-color: green;
+    
     transition: 0.5s;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     bottom: 10px;
 }
 

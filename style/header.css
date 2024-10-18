@@ -48,6 +48,34 @@
     padding-top: 15px;
 }
 
+.tooltip {
+    position: relative;
+}
+  
+.tooltipText {
+    z-index: 3;
+    position: fixed;
+    display: block;
+    text-align: center;
+    visibility: hidden;
+    height: fit-content;
+    min-width: 60px;
+    max-width: 130px;
+    font-size: 15px;
+    font-weight: normal;
+    color: #fff;
+    background-color: #222;
+    opacity: 0.9;
+    padding: 8px;
+    border-radius: 6px;
+    border-bottom-left-radius: 0;
+    bottom: 0px;
+}
+  
+.tooltip:hover .tooltipText {
+    visibility: visible;
+}
+
 .menuPrincipal a {
     display: flex;
     flex-direction: column;

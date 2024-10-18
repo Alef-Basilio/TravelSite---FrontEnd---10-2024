@@ -3,8 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 60px;
-    padding-bottom: 160px;
+    padding-top: 40px;
+    padding-bottom: 180px;
 }
 
 .collectionContent {
@@ -54,23 +54,26 @@
     align-items: center;
     height: 65px;
     width: 65px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-size: 40px;
+    font-weight: bolder;
     color: white;
     background-color: black;
     border: 1px solid white;
     border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     cursor: pointer;
 }
 
 .arrow-right {
-    right: 14vw;
+    right: 12vw;
 }
 
 .collectionAllItems {
     flex-flow: row nowrap;
     display: flex;
     align-items: center;
-    height: 550px;
+    height: 510px;
     padding-left: 45px;
     padding-right: 45px;
     margin-top: 10px;
@@ -84,14 +87,14 @@
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    height: 300px;
+    height: 305px;
     width: 400px;
     color: black;
+    background-color: white;
     opacity: 0.5;
     transition: 1s;
-    padding: 15px;
+    border-radius: 2px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    border-radius: 10px;
     pointer-events: none;
 }
 
@@ -112,7 +115,10 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: rgb(235, 235, 235);
+    font-size: 20px;
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .collectionItem .text {
@@ -120,12 +126,18 @@
     display: none;
 }
 
+.collectionItem .title, .collectionItem .text {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 .current-item {
-    height: 500px;
-    transition: 0.7s;
+    height: 490px;
+    transition: 1s;
     opacity: 1;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     pointer-events: auto;
+    cursor: pointer;
 }
 
 .current-item .text {

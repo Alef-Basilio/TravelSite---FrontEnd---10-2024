@@ -14,11 +14,11 @@
     width: inherit;
     background-image: url("../images/bg1.jfif");
     background-size: cover;
-    background-position-y: -150px;
+    background-position-y: top;
     background-position-x: center;
     background-repeat: no-repeat;
-	-webkit-animation: motion-simulation 10s ease-out infinite both;
-    animation: motion-simulation 10s ease-out infinite both;
+	-webkit-animation: motion-simulation 220s ease-out infinite both;
+    animation: motion-simulation 220s ease-out infinite both;
 }
 
 .introTitle {
@@ -27,7 +27,9 @@
     display: flex;
     justify-content: center;
     width: fit-content;
+    text-transform: uppercase;
     font-size: 180px;
+    color: rgb(255, 255, 255);
     -webkit-animation: focus-in-focus-out 2.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 	animation: focus-in-focus-out 2.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
     cursor: pointer;
@@ -43,8 +45,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px;
+    height: 540px;
     width: 75vw;
+    font-size: 18px;
     top: 390px;
     gap: 5px;
     overflow-y: visible;
@@ -74,6 +77,7 @@
     clip-path: polygon(0% 0%, 100% 0%, 50% 100%, 50% 100%);
     background-color: white;
     transition: 0.2s;
+    cursor: pointer;
 }
 
 .introCard:hover .introCardPointed {
@@ -90,6 +94,8 @@
     background-color: white;
     transition: 0.2s;
     padding-bottom: 20px;
+    border-radius: 2px;
+    cursor: pointer;
 }
 
 .introCard:hover .introCardContent {
@@ -109,7 +115,7 @@
     flex-direction: column;
     align-items: center;
     height: fit-content;
-    height: 230px;
+    height: 270px;
     width: 80%;
 }
 
@@ -119,7 +125,24 @@
     padding-bottom: 20px;
 }
 
+.cardText h2 {
+    font-size: 30px;
+}
+
+.introCard:nth-child(1) .cardText h2 {
+    color: rgb(0, 187, 3);
+}
+
+.introCard:nth-child(2) .cardText h2 {
+    color: rgb(0, 0, 255);
+}
+
+.introCard:nth-child(3) .cardText h2 {
+    color: rgb(255, 106, 106);
+}
+
 .cardText h3 {
+    font-size: 18px;
     padding-bottom: 0;
 }
 
@@ -140,22 +163,16 @@
 
 @keyframes motion-simulation {
     0% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        -webkit-transform-origin: 50% 16%;
-        transform-origin: 50% 16%;
+        
+        background-position-y: top;
     }
     50% {
-        -webkit-transform: translateY(-15px);
-        transform: translateY(-15px);
-        -webkit-transform-origin: top;
-        transform-origin: top;
+        
+        background-position-y: bottom;
     }
     100% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        -webkit-transform-origin: 50% 16%;
-        transform-origin: 50% 16%;
+        
+        background-position-y: top;
       }
 }
 
