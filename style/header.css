@@ -5,28 +5,32 @@
     width: 100%;
 }
 
-.menu {
+.menu, .mobileMenu {
     z-index: 2;
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
-    width: 75vw;
+    width: inherit;
 	-webkit-animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 	animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 }
 
-.menu ul {
+.mobileMenu {
+    display: none;
+}
+
+.menu ul, .mobileMenu ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    width: 100%;
+    width: 75vw;
     list-style: none;
 }
 
-.menu ul li {
+.menu ul li, .mobileMenu ul li {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,7 +38,39 @@
     width: 20%;
 }
 
-.menu ul li a {
+.menu ul li:first-child {
+    display: none;
+    justify-content: end;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: fit-content;
+    font-size: 40px;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.mobileMenu ul li:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.mobileMenu ul li:last-child span {
+    height: 8px;
+    width: 70px;
+    background-color: black;
+    border-radius: 2px;
+}
+
+.mobileMenu ul li:last-child:active span {
+    background-color: white;
+}
+
+.menu ul li a, .mobileMenu ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,12 +84,16 @@
     padding-top: 15px;
 }
 
+.menu ul li a:active, .mobileMenu ul li a:active {
+    color: white;
+}
+
 .tooltip {
     position: relative;
 }
   
 .tooltipText {
-    z-index: 3;
+    z-index: 4;
     position: fixed;
     display: block;
     text-align: center;
@@ -76,7 +116,7 @@
     visibility: visible;
 }
 
-.menuPrincipal a {
+#menuPrincipal a {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -84,8 +124,21 @@
 }
 
 .menuPrincipalIcon {
-    height: auto;
+    height: 100%;
     width: 60px;
+    background-image: url("../images/icon.png");
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+.menu ul li a:active .menuPrincipalIcon, .mobileMenu ul li a:active .menuPrincipalIcon {
+    background-image: url("../images/icon1.4.png");
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: center;
+    background-repeat: no-repeat;
 }
 
 @keyframes slide-in-blurred-top {
@@ -106,5 +159,68 @@
         -webkit-filter: blur(0);
                 filter: blur(0);
         opacity: 1;
+    }
+}
+
+@media (width < 1000px) {
+    .menu {
+        z-index: 3;
+        position: fixed;
+        align-items: start;
+        height: 100vh;
+        width: 100%;
+        left: 100vw;
+        -webkit-animation: none;
+        animation: none;
+        color: white;
+        background-color: #222;
+        opacity: 0.99;
+        transition: 1s;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        justify-content: start;
+        height: 91%;
+        width: 100%;
+    }
+
+    .menu ul li {
+        width: inherit;
+    }
+
+    .menu ul li:hover {
+        opacity: 0.8;
+    }
+
+    .menu ul li:active {
+        opacity: 0.6;
+    }
+
+    .menu ul li:first-child {
+        display: flex;
+        font-weight: bolder;
+        border-bottom: 1px solid white;
+    }
+
+    .menu ul li:last-child {
+        border-bottom: 1px solid white;
+    }
+
+    .menu ul li a {
+        width: inherit;
+        color: white;
+    }
+
+    .menu #menuPrincipal {
+        display: none;
+    }
+
+    .mobileMenu {
+        display: flex;
+    }
+
+    .mobileMenu ul {
+        justify-content: space-evenly;
     }
 }

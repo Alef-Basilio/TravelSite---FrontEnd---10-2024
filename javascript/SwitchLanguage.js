@@ -1,5 +1,4 @@
 localStorage.setItem("language", "en-us");
-console.log(localStorage.getItem("languageEvent"));
 
 const menu = document.querySelector(".menu ul");
 
@@ -28,7 +27,6 @@ const footerContent = document.querySelector(".footerContent");
 
 function switchLanguage() {
     const language = localStorage.getItem("language");
-    console.log(language);
     localStorage.setItem("language", "pt-br");
     localStorage.setItem("languageEvent", 1);
 
@@ -38,10 +36,10 @@ function menuChanger([...menuText]) {
     const span = document.createElement("span");
     span.classList.add("tooltipText");
 
-    for (let i = 0; i < menu.children.length; i++) {
-        i == 2 ? i = 3 : i;
-        menu.children[i].children[0].textContent = menuText[i];
-        span.textContent = menuText[i];
+    for (let i = 1; i < menu.children.length; i++) {
+        i == 3 ? i++ : i;
+        menu.children[i].children[0].textContent = menuText[i - 1];
+        span.textContent = menuText[i - 1];
         menu.children[i].children[0].appendChild(span.cloneNode(true));
     }
 }
@@ -182,9 +180,9 @@ function textChanger([...pText]) {
 }
 
 textChanger(
-    ["Ciclismo, ou ciclismo, é uma excelente maneira de melhorar sua saúde física e mental enquanto se diverte. O ciclismo regular pode ajudar você a desenvolver resistência cardiovascular, aumentar a força muscular e a flexibilidade e melhorar seu humor. Também é um meio de transporte ecologicamente correto e uma ótima maneira de explorar novos lugares.",
-    "Caminhar é uma maneira maravilhosa de se conectar com a natureza e melhorar seu bem-estar geral. Estar ao ar livre e cercado por belezas naturais pode ajudar a reduzir o estresse e a ansiedade, enquanto a atividade física de caminhar pode melhorar seu humor e níveis de energia. Caminhar também proporciona um excelente treino, melhorando a saúde cardiovascular, fortalecendo os músculos e aumentando a flexibilidade.",
-    "Escalar é uma atividade desafiadora e gratificante que oferece inúmeros benefícios físicos e mentais. Ela requer força, resistência e foco mental, o que a torna uma excelente maneira de melhorar o condicionamento físico geral. Ela também pode ajudar você a desenvolver habilidades de resolução de problemas, construir confiança e melhorar sua coordenação e equilíbrio.",
+    ["Ciclismo é uma excelente maneira de melhorar sua saúde física e mental enquanto se diverte. Esta atividade regular pode ajudar você a desenvolver resistência cardiovascular, aumentar a força muscular e a flexibilidade e melhorar seu humor. Também é um meio de transporte ecologicamente correto e uma ótima maneira de explorar novos lugares.",
+    "Caminhar é uma maneira maravilhosa de se conectar com a natureza e melhorar seu bem-estar geral. Estar ao ar livre e cercado por belezas naturais pode ajudar a reduzir o estresse e a ansiedade, enquanto a atividade física pode melhorar seu humor e níveis de energia. Caminhar também proporciona um excelente treino, melhorando a saúde cardiovascular, fortalecendo os músculos e aumentando a flexibilidade.",
+    "Escalar é uma atividade desafiadora e gratificante que oferece inúmeros benefícios físicos e mentais. Ela requer força, resistência e foco mental, o que a torna uma excelente maneira de melhorar o condicionamento físico geral. Também pode ajudar você a desenvolver habilidades de resolução de problemas, construir confiança e melhorar sua coordenação e equilíbrio.",
     "Tomar um banho em uma cachoeira é uma experiência verdadeiramente revigorante que pode fazer você se sentir revigorado, revitalizado e conectado à natureza. A força da água pode ser incrivelmente terapêutica, massageando a tensão e o estresse, enquanto a água fria pode ajudar a reduzir a inflamação e melhorar a circulação.",
     "Tomar um banho em um ambiente de praia pode ser uma experiência verdadeiramente rejuvenescedora. O calor do sol e o som suave das ondas podem ajudar a acalmar e relaxar a mente, enquanto a água fria pode proporcionar uma sensação refrescante na pele. Estar cercado pela beleza da natureza também pode ter um impacto profundo no bem-estar mental, promovendo uma sensação de paz e tranquilidade."]
 );
@@ -204,10 +202,8 @@ window.addEventListener("load", () => {
     const language = localStorage.getItem("language");
     
     if (language == "en-us" && localStorage.getItem("languageEvent") == 1) {
-        console.log(language);
         switchLanguage();
     } else if (language == "pt-br") {
-        console.log(language);
         localStorage.setItem("language", "en-us");
         localStorage.setItem("languageEvent", 0);
         window.location.reload();
@@ -221,9 +217,7 @@ if (language == "en-us" && localStorage.getItem("languageEvent") == 1) {
     switchLanguage();
 } else if (language == "en-us") {
     switchLanguage();
-    console.log("only");
 } else if (language == "pt-br") {
-    console.log(language);
     localStorage.setItem("language", "en-us");
     localStorage.setItem("languageEvent", 0);
     window.location.reload();

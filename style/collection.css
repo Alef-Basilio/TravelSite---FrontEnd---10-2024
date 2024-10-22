@@ -73,11 +73,9 @@
     flex-flow: row nowrap;
     display: flex;
     align-items: center;
-    height: 510px;
+    height: 560px;
     padding-left: 45px;
     padding-right: 45px;
-    margin-top: 10px;
-    margin-bottom: 10px;
     gap: 15px;
 }
 
@@ -132,7 +130,7 @@
 }
 
 .current-item {
-    height: 490px;
+    height: 515px;
     transition: 1s;
     opacity: 1;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -142,8 +140,8 @@
 
 .current-item .text {
     display: block;
-	-webkit-animation: slide-in-top 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
-	animation: slide-in-top 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+	-webkit-animation: slide-in-top 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+	animation: slide-in-top 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 }
 
 @keyframes slide-in-top {

@@ -46,6 +46,11 @@ footer {
     bottom: 10px;
 }
 
+#footerPrincipal .menuPrincipalIcon {
+    height: auto;
+    width: 60px;
+}
+
 #footerPrincipal:hover {
     transition: 0.5s;
     bottom: 15px;
