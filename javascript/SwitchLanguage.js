@@ -1,4 +1,5 @@
 localStorage.setItem("language", "en-us");
+console.log(localStorage.getItem("languageEvent"));
 
 const menu = document.querySelector(".menu ul");
 
@@ -25,12 +26,11 @@ let text = document.querySelectorAll(".text");
 
 const footerContent = document.querySelector(".footerContent");
 
-menu.lastElementChild.addEventListener("click", () => {
-const language = localStorage.getItem("language");
-
-if (language == "en-us") {
-    
-localStorage.setItem("language", "pt-br");
+function switchLanguage() {
+    const language = localStorage.getItem("language");
+    console.log(language);
+    localStorage.setItem("language", "pt-br");
+    localStorage.setItem("languageEvent", 1);
 
 document.title = "Tourest | Página Principal";
 
@@ -198,8 +198,34 @@ function footerContentChanger([...aText]) {
 
 footerContentChanger(["Soluções", "Empresa", "Recursos", "Contato"]);
 
-} else {
+}
+
+window.addEventListener("load", () => {
+    const language = localStorage.getItem("language");
+    
+    if (language == "en-us" && localStorage.getItem("languageEvent") == 1) {
+        console.log(language);
+        switchLanguage();
+    } else if (language == "pt-br") {
+        console.log(language);
+        localStorage.setItem("language", "en-us");
+        localStorage.setItem("languageEvent", 0);
+        window.location.reload();
+    }
+});
+
+menu.lastElementChild.addEventListener("click", () => {
+const language = localStorage.getItem("language");
+
+if (language == "en-us" && localStorage.getItem("languageEvent") == 1) {
+    switchLanguage();
+} else if (language == "en-us") {
+    switchLanguage();
+    console.log("only");
+} else if (language == "pt-br") {
+    console.log(language);
     localStorage.setItem("language", "en-us");
+    localStorage.setItem("languageEvent", 0);
     window.location.reload();
 }
 });
