@@ -4,7 +4,7 @@ export function collectionItem(imgSrc, h4Text, h2Text, pText) {
     const item = document.createElement("div");
     const img = document.createElement("img");
     const title = document.createElement("div");
-    const text = document.createElement("div");
+    const text = document.createElement("p");
     const h2 = document.createElement("h2");
     const h4 = document.createElement("h4");
     const p = document.createElement("p");

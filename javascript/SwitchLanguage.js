@@ -1,3 +1,5 @@
+localStorage.setItem("language", "en-us");
+
 const menu = document.querySelector(".menu ul");
 
 const introTitle = document.querySelector(".introTitle");
@@ -15,18 +17,36 @@ const placesTitleSpace = document.querySelectorAll(".placesTitleSpace");
 const placesItemContent = document.querySelectorAll(".placesItemContent p");
 const placesDescription_2 = document.querySelectorAll(".placesDescription_2");
 const placesAdvice = document.querySelectorAll(".placesAdvice");
+const placesButtonSpan = document.querySelectorAll(".placesButton span");
+
+const collectionDescription = document.querySelector(".collectionDescription");
+let titleH2 = document.querySelectorAll(".title h2");
+let text = document.querySelectorAll(".text");
+
+const footerContent = document.querySelector(".footerContent");
+
+menu.lastElementChild.addEventListener("click", () => {
+const language = localStorage.getItem("language");
+
+if (language == "en-us") {
+    
+localStorage.setItem("language", "pt-br");
 
 document.title = "Tourest | Página Principal";
 
 function menuChanger([...menuText]) {
+    const span = document.createElement("span");
+    span.classList.add("tooltipText");
+
     for (let i = 0; i < menu.children.length; i++) {
-        if (!menu.children[i].children[0].children[0]) {
-            menu.children[i].children[0].textContent = menuText[i];
-        }
+        i == 2 ? i = 3 : i;
+        menu.children[i].children[0].textContent = menuText[i];
+        span.textContent = menuText[i];
+        menu.children[i].children[0].appendChild(span.cloneNode(true));
     }
 }
 
-menuChanger(["pacotes", "Descontos", "", "Loja", "EN-US"]);
+menuChanger(["Pacotes", "Descontos", "", "Loja", "EN-US"]);
 
 introTitle.textContent = "Explore";
 
@@ -119,8 +139,67 @@ placesDescription_2Changer(
 
 placesAdvice.forEach(advice => {
     advice.textContent = "dica";
-    advice.style.padding = "3px 12px 3px 12px"
+    advice.style.padding = "3px 12px 3px 12px";
 });
 
+placesButtonSpan.forEach(button => {
+    button.textContent = "Agende agora!";
+});
 
-console.log(placesDescription_2.length);
+collectionDescription.children[0].textContent = "Calendário de eventos";
+
+function collectionDescriptionPChanger([...pText]) {
+    for (let i = 1; i < collectionDescription.children.length; i++) {
+        collectionDescription.children[i].textContent = pText[i - 1];
+    }
+}
+
+collectionDescriptionPChanger(
+    ["Nosso calendário de eventos é fácil de navegar e fornece todos os detalhes necessários sobre cada evento. Você pode encontrar informações sobre data, hora, local, palestrantes e tópicos.",
+    "Também incluímos links de inscrição e quaisquer recursos adicionais que possam ser relevantes para o evento. Incentivamos os membros da nossa comunidade a participar de nossos eventos compartilhando seus insights, fazendo perguntas e se envolvendo com outros. Nossos eventos são projetados para serem interativos e fornecer oportunidades de aprendizado, crescimento e colaboração."]
+);
+
+function titleH2Changer([...h2Text]) {
+    setTimeout(() => {
+        titleH2 = document.querySelectorAll(".title h2");
+
+        for (let i = 0; i < titleH2.length; i++) {
+            titleH2[i].textContent = h2Text[i];
+        }
+    }, 2000);
+}
+
+titleH2Changer(["Ciclismo", "Caminhada", "Escalada", "Cachoeira", "Praia"]);
+
+function textChanger([...pText]) {
+    setTimeout(() => {
+        text = document.querySelectorAll(".text");
+
+        for (let i = 0; i < titleH2.length; i++) {
+            text[i].textContent = pText[i];
+        }
+    }, 2000);
+}
+
+textChanger(
+    ["Ciclismo, ou ciclismo, é uma excelente maneira de melhorar sua saúde física e mental enquanto se diverte. O ciclismo regular pode ajudar você a desenvolver resistência cardiovascular, aumentar a força muscular e a flexibilidade e melhorar seu humor. Também é um meio de transporte ecologicamente correto e uma ótima maneira de explorar novos lugares.",
+    "Caminhar é uma maneira maravilhosa de se conectar com a natureza e melhorar seu bem-estar geral. Estar ao ar livre e cercado por belezas naturais pode ajudar a reduzir o estresse e a ansiedade, enquanto a atividade física de caminhar pode melhorar seu humor e níveis de energia. Caminhar também proporciona um excelente treino, melhorando a saúde cardiovascular, fortalecendo os músculos e aumentando a flexibilidade.",
+    "Escalar é uma atividade desafiadora e gratificante que oferece inúmeros benefícios físicos e mentais. Ela requer força, resistência e foco mental, o que a torna uma excelente maneira de melhorar o condicionamento físico geral. Ela também pode ajudar você a desenvolver habilidades de resolução de problemas, construir confiança e melhorar sua coordenação e equilíbrio.",
+    "Tomar um banho em uma cachoeira é uma experiência verdadeiramente revigorante que pode fazer você se sentir revigorado, revitalizado e conectado à natureza. A força da água pode ser incrivelmente terapêutica, massageando a tensão e o estresse, enquanto a água fria pode ajudar a reduzir a inflamação e melhorar a circulação.",
+    "Tomar um banho em um ambiente de praia pode ser uma experiência verdadeiramente rejuvenescedora. O calor do sol e o som suave das ondas podem ajudar a acalmar e relaxar a mente, enquanto a água fria pode proporcionar uma sensação refrescante na pele. Estar cercado pela beleza da natureza também pode ter um impacto profundo no bem-estar mental, promovendo uma sensação de paz e tranquilidade."]
+);
+
+function footerContentChanger([...aText]) {
+    for (let i = 0; i < footerContent.children.length; i++) {
+        i == 2 ? i++ : i;
+        i > 2 ? footerContent.children[i].textContent = aText[i - 1]: footerContent.children[i].textContent = aText[i];
+    }
+}
+
+footerContentChanger(["Soluções", "Empresa", "Recursos", "Contato"]);
+
+} else {
+    localStorage.setItem("language", "en-us");
+    window.location.reload();
+}
+});
