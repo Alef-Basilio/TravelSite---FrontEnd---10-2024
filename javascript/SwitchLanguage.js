@@ -10,7 +10,7 @@ const tourDescription = document.querySelector(".tourDescription");
 const tourH2 = document.querySelector(".tourDescription h2");
 const descriptionTopics = document.querySelector(".descriptionTopics");
 const tourP = document.querySelector(".tourDescription p");
-const tourButtonSpan = document.querySelector(".tourButton span");
+const tourButtonSpan = document.querySelector(".tourButtonContent span");
 
 const placesContentH2 = document.querySelector(".placesContent h2");
 const placesTitleSpace = document.querySelectorAll(".placesTitleSpace");

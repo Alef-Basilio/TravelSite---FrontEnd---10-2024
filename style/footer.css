@@ -39,7 +39,6 @@ footer {
     width: inherit;
     color: white;
     background-color: green;
-    
     transition: 0.5s;
     border-radius: 2px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -66,4 +65,58 @@ footer {
     background-position-y: center;
     background-position-x: center;
     background-repeat: no-repeat;
+}
+
+@media (width < 1200px) {
+    .footerContent {
+        width: 85vw;
+    }
+}
+
+@media (width < 1100px) {
+    .footerContent {
+        width: 88vw;
+    }
+}
+
+@media (width < 950px) {
+    .footerContent {
+        width: 85vw;
+    }
+}
+
+@media (width < 750px) {
+    .footerContent {
+        width: 100vw;
+    }
+}
+
+@media (width < 650px) {
+    .footerContent {
+        flex-direction: column;
+        width: 90vw;
+        bottom: -350px;
+    }
+
+    .footerContent a, .footerContent div {
+        width: 100%;
+    }
+
+    #footerPrincipal {
+        width: 95%;
+    }
+
+    #footerPrincipal {
+        flex-direction: row;
+        bottom: 200px;
+    }
+
+    #footerPrincipal:hover {
+        width: 100%;
+        bottom: 200px;
+    }
+
+    .footerBackground {
+        height: 500px;
+    }
 }

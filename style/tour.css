@@ -67,7 +67,7 @@
     text-align: left;
 }
 
-.tourButton {
+.tourButtonContent {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -80,11 +80,11 @@
     cursor: pointer;
 }
 
-.tourButton:active {
+.tourButtonContent:active {
     background-color: rgb(171, 0, 0);
 }
 
-.tourButton img {
+.tourButtonContent img {
     height: 100%;
     width: auto;
     transition: 1.5s;
@@ -92,13 +92,83 @@
     margin: 0;
 }
 
-.tourButton:hover img {
+.tourButtonContent:hover img {
     transition: 1.5s;
     margin-left: 30%;
 }
 
-.tourButton span {
+.tourButtonContent span {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 18px;
     color: white;
 }
+
+@media (width < 1200px) {
+    .tourContent {
+        width: 85vw;
+    }
+}
+
+@media (width < 1100px) {
+    .tourContent {
+        width: 100vw;
+    }
+
+    .tourDescription h2 {
+        font-size: 40px;
+    }
+}
+
+@media (width < 950px) {
+    .tour {
+        margin-top: 1800px;
+    }
+
+    .tourContent {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .tourDescription {
+        height: fit-content;
+        width: 85%;
+    }
+
+    .tourButtonSpace {
+        display: flex;
+        justify-content: end;
+        width: 100%;
+    }
+}
+
+@media (width < 750px) {
+    .tour {
+        margin-top: 1950px;
+    }
+}
+
+@media (width < 650px) {
+    .tour {
+        margin-top: 1680px;
+    }
+}
+
+@media (width < 460px) {
+    .tour {
+        margin-top: 1880px;
+    }
+}
+
+@media (width < 670px) {
+    .tourDescription {
+        width: 90%;
+    }
+
+    .tourDescription h2 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+/*@media (width < 330px) {}

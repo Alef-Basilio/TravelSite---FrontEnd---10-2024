@@ -162,7 +162,7 @@
     }
 }
 
-@media (width < 1000px) {
+@media (width < 1200px) {
     .menu {
         z-index: 3;
         position: fixed;
@@ -183,6 +183,10 @@
         justify-content: start;
         height: 91%;
         width: 100%;
+    }
+
+    .mobileMenu ul {
+        width: 85vw;
     }
 
     .menu ul li {
@@ -222,5 +226,27 @@
 
     .mobileMenu ul {
         justify-content: space-evenly;
+    }
+}
+
+@media (width < 1100px) {
+    .mobileMenu ul {
+        width: 88vw;
+    }
+}
+
+@media (width < 950px) {
+    .mobileMenu ul {
+        justify-content: space-between;
+        width: 85vw;
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+}
+
+@media (width < 650px) {
+    .mobileMenu ul {
+        padding-left: 0;
+        padding-right: 0;
     }
 }

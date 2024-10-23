@@ -5,7 +5,7 @@ const navbar = document.querySelector(".navbar");
 let menutOpen = false;
 
 mobileMenuButton.addEventListener("click", () => {
-    if (window.innerWidth < 1000) {
+    if (window.innerWidth < 1200) {
         mobileMenuButton.style.opacity = "0";
         menut.style.left = "0";
         menutOpen = true;
@@ -13,7 +13,7 @@ mobileMenuButton.addEventListener("click", () => {
 });
 
 menutClose.addEventListener("click", () => {
-    if (window.innerWidth < 1000) {
+    if (window.innerWidth < 1200) {
         mobileMenuButton.style.opacity = "1";
         menut.style.left = "100vw";
         menutOpen = false;
@@ -21,12 +21,12 @@ menutClose.addEventListener("click", () => {
 });
 
 setInterval(() => {
-    if (window.innerWidth > 1000) {
+    if (window.innerWidth > 1200) {
         mobileMenuButton.style.opacity = "0";
         menut.style.display = "flex";
         menut.style.left = "0";
         menutOpen = false;
-    } else if (window.innerWidth < 1000 && !menutOpen) {
+    } else if (window.innerWidth < 1200 && !menutOpen) {
         mobileMenuButton.style.opacity = "1";
         menut.style.left = "100vw";
     }
