@@ -161,6 +161,10 @@
     .collectionContent {
         width: 85vw;
     }
+
+    .arrow-right {
+        right: 7vw;
+    }
 }
 
 @media (width < 1100px) {
@@ -179,11 +183,19 @@
     .current-item {
         height: 540px;
     }
+
+    .arrow-right {
+        right: 5.5vw;
+    }
 }
 
 @media (width < 950px) {
     .collectionContent {
         width: 85vw;
+    }
+
+    .arrow-right {
+        right: 6.8vw;
     }
 }
 
@@ -204,6 +216,10 @@
         height: 570px;
     }
 
+    .arrow-right {
+        right: 4vw;
+    }
+
     .collectionItem .title {
         padding-top: 35px;
         padding-bottom: 35px;
@@ -214,5 +230,67 @@
     .collectionAllItems {   
         padding-left: 25px;
         padding-right: 25px;
+    }
+}
+
+@media (width < 430px) {
+    .collectionAllItems {   
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .arrow-right {
+        right: 3vw;
+    }
+}
+
+@media (width < 400px) {
+    .collectionAllItems {
+        height: 730px;
+    }
+
+    .collectionItem {
+        width: 310px;
+        transition: 0.5s;
+    }
+
+    .collectionItem .title {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .current-item {
+        height: 650px;
+        transition: 0.5s;
+    }
+}
+
+@media (width < 350px) {
+    .collectionAllItems {
+        height: 820px;
+    }
+
+    .collectionItem {
+        width: 260px;
+        transition: 0.3s;
+    }
+
+    .arrow-right {
+        right: 4vw;
+    }
+
+    .collectionItem .title {
+        padding-top: 50px;
+        padding-bottom: 90px;
+    }
+
+    .current-item .text {
+        -webkit-animation: slide-in-top 2.7s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+        animation: slide-in-top 2.7s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    }
+
+    .current-item {
+        height: 720px;
+        transition: 0.3s;
     }
 }

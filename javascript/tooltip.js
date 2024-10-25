@@ -1,7 +1,7 @@
 const tooltipText = document.getElementsByClassName("tooltipText");
 
 window.onmousemove = function(e) {
-    if (window.innerWidth > 1000) {
+    if (window.innerWidth > 1200) {
         Array.prototype.forEach.call(tooltipText, element => {
             element.style.display = "block";
         });

@@ -1,32 +1,32 @@
 localStorage.setItem("language", "en-us");
+let language = localStorage.getItem("language");
 
 const menu = document.querySelector(".menu ul");
 
-const introTitle = document.querySelector(".introTitle");
-const cardText = document.querySelectorAll(".cardText");
-const cardComplement = document.querySelectorAll(".cardComplement");
-
-const tourDescription = document.querySelector(".tourDescription");
-const tourH2 = document.querySelector(".tourDescription h2");
-const descriptionTopics = document.querySelector(".descriptionTopics");
-const tourP = document.querySelector(".tourDescription p");
-const tourButtonSpan = document.querySelector(".tourButtonContent span");
-
-const placesContentH2 = document.querySelector(".placesContent h2");
-const placesTitleSpace = document.querySelectorAll(".placesTitleSpace");
-const placesItemContent = document.querySelectorAll(".placesItemContent p");
-const placesDescription_2 = document.querySelectorAll(".placesDescription_2");
-const placesAdvice = document.querySelectorAll(".placesAdvice");
-const placesButtonSpan = document.querySelectorAll(".placesButton span");
-
-const collectionDescription = document.querySelector(".collectionDescription");
-let titleH2 = document.querySelectorAll(".title h2");
-let text = document.querySelectorAll(".text");
-
-const footerContent = document.querySelector(".footerContent");
-
 function switchLanguage() {
-    const language = localStorage.getItem("language");
+    const introTitle = document.querySelector(".introTitle");
+    const cardText = document.querySelectorAll(".cardText");
+    const cardComplement = document.querySelectorAll(".cardComplement");
+    
+    const tourH2 = document.querySelector(".tourDescription h2");
+    const descriptionTopics = document.querySelector(".descriptionTopics");
+    const tourP = document.querySelector(".tourDescription p");
+    const tourButtonSpan = document.querySelector(".tourButtonContent span");
+    
+    const placesContentH2 = document.querySelector(".placesContent h2");
+    const placesTitleSpace = document.querySelectorAll(".placesTitleSpace");
+    const placesItemContent = document.querySelectorAll(".placesItemContent p");
+    const placesDescription_2 = document.querySelectorAll(".placesDescription_2");
+    const placesAdvice = document.querySelectorAll(".placesAdvice");
+    const placesButtonSpan = document.querySelectorAll(".placesButton span");
+    
+    const collectionDescription = document.querySelector(".collectionDescription");
+    let titleH2 = document.querySelectorAll(".title h2");
+    let text = document.querySelectorAll(".text");
+    
+    const footerContent = document.querySelector(".footerContent");
+
+    language = localStorage.getItem("language");
     localStorage.setItem("language", "pt-br");
     localStorage.setItem("languageEvent", 1);
 
@@ -199,7 +199,7 @@ footerContentChanger(["Soluções", "Empresa", "Recursos", "Contato"]);
 }
 
 window.addEventListener("load", () => {
-    const language = localStorage.getItem("language");
+    language = localStorage.getItem("language");
     
     if (language == "en-us" && localStorage.getItem("languageEvent") == 1) {
         switchLanguage();
@@ -211,7 +211,7 @@ window.addEventListener("load", () => {
 });
 
 menu.lastElementChild.addEventListener("click", () => {
-const language = localStorage.getItem("language");
+language = localStorage.getItem("language");
 
 if (language == "en-us" && localStorage.getItem("languageEvent") == 1) {
     switchLanguage();

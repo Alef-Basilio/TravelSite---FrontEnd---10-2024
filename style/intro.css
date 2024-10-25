@@ -274,12 +274,30 @@
     }
 }
 
+@media (width < 520px) {
+    .cardText {
+        height: 270px;
+    }
+}
+
 @media (width < 460px) {
     .introTitle {
         font-size: 60px;
     }
+}
+
+@media (width < 420px) {
+    .cardText {
+        height: 290px;
+    }
+}
+
+@media (width < 330px) {
+    .introCard img {
+        height: 230px;
+    }
 
     .cardText {
-        height: 270px;
+        height: 335px;
     }
 }

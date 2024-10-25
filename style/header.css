@@ -237,16 +237,15 @@
 
 @media (width < 950px) {
     .mobileMenu ul {
-        justify-content: space-between;
+        justify-content: space-around;
         width: 85vw;
-        padding-left: 120px;
-        padding-right: 120px;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
 @media (width < 650px) {
     .mobileMenu ul {
-        padding-left: 0;
-        padding-right: 0;
+        width: 90vw;
     }
 }

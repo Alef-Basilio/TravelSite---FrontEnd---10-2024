@@ -81,12 +81,6 @@ footer {
 
 @media (width < 950px) {
     .footerContent {
-        width: 85vw;
-    }
-}
-
-@media (width < 750px) {
-    .footerContent {
         width: 100vw;
     }
 }
