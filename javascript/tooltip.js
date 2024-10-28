@@ -1,7 +1,7 @@
 const tooltipText = document.getElementsByClassName("tooltipText");
 
 window.onmousemove = function(e) {
-    if (window.innerWidth > 1200) {
+    if (window.innerWidth >= 1200) {
         Array.prototype.forEach.call(tooltipText, element => {
             element.style.display = "block";
         });
@@ -11,7 +11,6 @@ window.onmousemove = function(e) {
             const radius = checkY == -30 ? "6px" : "0";
             tooltipText[i].style.borderBottomLeftRadius = radius;
             tooltipText[i].style.borderTopLeftRadius = radius == "6px" ? "0" : "6px";
-        
             tooltipText[i].style.top = (e.clientY - checkY) + "px";
             tooltipText[i].style.left = (e.clientX + 10) + "px";
         }

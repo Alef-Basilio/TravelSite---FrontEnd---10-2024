@@ -21,7 +21,7 @@ menutClose.addEventListener("click", () => {
 });
 
 setInterval(() => {
-    if (window.innerWidth > 1200) {
+    if (window.innerWidth >= 1200) {
         mobileMenuButton.style.opacity = "0";
         menut.style.display = "flex";
         menut.style.left = "0";
@@ -31,5 +31,3 @@ setInterval(() => {
         menut.style.left = "100vw";
     }
 }, 1);
-
-console.log(mobileMenuButton.children);

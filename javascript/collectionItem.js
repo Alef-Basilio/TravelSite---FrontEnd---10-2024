@@ -1,5 +1,3 @@
-const collection = document.querySelector(".collectionAllItems");
-
 export function collectionItem(imgSrc, h4Text, h2Text, pText) {
     const item = document.createElement("div");
     const img = document.createElement("img");
@@ -8,6 +6,7 @@ export function collectionItem(imgSrc, h4Text, h2Text, pText) {
     const h2 = document.createElement("h2");
     const h4 = document.createElement("h4");
     const p = document.createElement("p");
+    const collection = document.querySelector(".collectionAllItems");
 
     img.classList.add("image");
     item.classList.add("collectionItem");

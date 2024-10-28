@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     height: fit-content;
-    background-image: url("../images/bg2.jpg");
+    background-image: url("../images/placesBackground1.jpg");
     background-size: cover;
     background-position-y: top;
     background-position-x: center;
@@ -24,12 +24,12 @@
 
 .placesContent h2 {
     font-size: 150px;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 .placesAllItems {
     width: fit-content;
-    background-color: aliceblue;
+    background-color: rgb(235, 235, 235);
     border-radius: 2px;
 }
 
@@ -64,16 +64,16 @@
 }
 
 .placesItem:nth-child(1) .itemImage {
-    background-image: url("../images/places1.2.jpg");
+    background-image: url("../images/itemImage1.jpg");
     background-position-y: bottom;
 }
 
 .placesItem:nth-child(2) .itemImage {
-    background-image: url("../images/places2.3.jpg");
+    background-image: url("../images/itemImage2.jpg");
 }
 
 .placesItem:nth-child(3) .itemImage {
-    background-image: url("../images/places3.jpg");
+    background-image: url("../images/itemImage3.jpg");
 }
 
 .placesItem:hover .itemImage {
@@ -134,9 +134,9 @@
     align-items: center;
     height: 50px;
     width: 240px;
+    background-color: rgb(255, 0, 0);
 	-webkit-animation: text-focus-in 0.3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 	animation: text-focus-in 0.3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-    background-color: red;
     padding: 8px;
     border-radius: 2px;
     cursor: pointer;
@@ -156,14 +156,14 @@
 }
 
 .placesButton span {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 18px;
-    color: white;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: rgb(255, 255, 255);
 }
 
 .placesAdvice {
     height: fit-content;
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 3px;
     margin-top: 25px;
     cursor: pointer;
@@ -183,14 +183,14 @@
 
 @keyframes text-focus-in {
     0% {
-      -webkit-filter: blur(12px);
-              filter: blur(12px);
-      opacity: 0;
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
     }
     100% {
-      -webkit-filter: blur(0px);
-              filter: blur(0px);
-      opacity: 1;
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
     }
 }
 
@@ -206,7 +206,7 @@
 
 @media (width < 1100px) {
     .places {
-        background-image: url("../images/bg2.4.jpg");
+        background-image: url("../images/placesBackground2.jpg");
     }
 
     .placesContent {
@@ -267,7 +267,6 @@
     }
 
     .itemImage {
-        height: 350px;
         min-width: 300px;
         max-width: 300px;
         transition: 0.8s;
@@ -288,7 +287,7 @@
 
 @media (width < 670px) {
     .places {
-        background-image: url("../images/bg2.5.jpg");
+        background-image: url("../images/placesBackground3.jpg");
         background-size: contain;
         background-repeat: repeat-y;
     }
@@ -298,7 +297,7 @@
     }
 
     .placesContent h2 {
-        color: black;
+        color: rgb(0, 0, 0);
     }
 
     .placesAllItems {

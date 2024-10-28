@@ -1,6 +1,6 @@
 localStorage.setItem("language", "en-us");
-let language = localStorage.getItem("language");
 
+let language = localStorage.getItem("language");
 const menu = document.querySelector(".menu ul");
 
 function switchLanguage() {
@@ -62,9 +62,11 @@ function cardTextPChanger([...pText]) {
     }
 }
 
-cardTextPChanger(["Lar das belas Montanhas Tatra, com trilhas de caminhada deslumbrantes, cachoeiras e vilas tradicionais. O país também ostenta uma gama diversificada de florestas, rios e lagos.", 
+cardTextPChanger(
+    ["Lar das belas Montanhas Tatra, com trilhas de caminhada deslumbrantes, cachoeiras e vilas tradicionais. O país também ostenta uma gama diversificada de florestas, rios e lagos.", 
     "A culinária italiana é famosa por seus sabores ricos, aromas e ingredientes ousados. Delicie-se com pizza, macarrão, gelato e expresso, e experimente alguns dos melhores vinhos do mundo, como Chianti e Prosecco.", 
-    "Um dos melhores lugares na Terra para testemunhar o espetáculo de tirar o fôlego da Aurora Boreal (Aurora Borealis). Experimente a peculiar e charmosa cultura islandesa, que é impregnada de história e folclore viking."]);
+    "Um dos melhores lugares na Terra para testemunhar o espetáculo de tirar o fôlego da Aurora Boreal (Aurora Borealis). Experimente a peculiar e charmosa cultura islandesa, que é impregnada de história e folclore viking."]
+);
 
 function cardComplementChanger(cardIndex, [...h4Text], [...spanText]) {
     for (let i = 0; i < cardComplement[cardIndex].children.length; i++) {
@@ -86,8 +88,10 @@ function descriptionTopicsChanger([...h3Text], [...spanText]) {
     }
 }
 
-descriptionTopicsChanger(["Duração", "Em grupo", "Premiações", "Explore"], 
-    ["4 horas", "+10 participantes", "Complete desafios!", "+3 lugares"]);
+descriptionTopicsChanger(
+    ["Duração", "Em grupo", "Premiações", "Explore"], 
+    ["4 horas", "+10 participantes", "Complete desafios!", "+3 lugares"]
+);
 
 tourP.textContent = "Participe de um passeio de bicicleta guiado para descobrir as joias escondidas da Islândia e aproveite a experiência de guias locais que conhecem as estradas e trilhas como a palma da mão. Explore as paisagens deslumbrantes da Islândia em uma fat bike, projetada para lidar com o terreno acidentado do país e as estradas cobertas de neve. As estradas são geralmente tranquilas, tornando-as um destino ideal para ciclistas que querem aproveitar a paisagem sem o incômodo do trânsito pesado.";
 
@@ -101,7 +105,6 @@ function placesTitleSpaceChanger(TitleSpaceIndex, h3Text, [...h4Text]) {
     for (let i = 0; i < placesTitleSpace[TitleSpaceIndex].children[1].children.length; i++) {
         placesTitleSpace[TitleSpaceIndex].children[1].children[i].textContent = h4Text[i];
     }
-
 }
 
 placesTitleSpaceChanger(0, "Val di Funes", ["Castelo", "Villnößtal,", "Tisens..."]);
@@ -144,7 +147,7 @@ placesButtonSpan.forEach(button => {
     button.textContent = "Agende agora!";
 });
 
-collectionDescription.children[0].textContent = "Calendário de eventos";
+collectionDescription.children[0].textContent = "Calendário de Eventos";
 
 function collectionDescriptionPChanger([...pText]) {
     for (let i = 1; i < collectionDescription.children.length; i++) {
@@ -195,7 +198,6 @@ function footerContentChanger([...aText]) {
 }
 
 footerContentChanger(["Soluções", "Empresa", "Recursos", "Contato"]);
-
 }
 
 window.addEventListener("load", () => {
@@ -211,15 +213,15 @@ window.addEventListener("load", () => {
 });
 
 menu.lastElementChild.addEventListener("click", () => {
-language = localStorage.getItem("language");
+    language = localStorage.getItem("language");
 
-if (language == "en-us" && localStorage.getItem("languageEvent") == 1) {
-    switchLanguage();
-} else if (language == "en-us") {
-    switchLanguage();
-} else if (language == "pt-br") {
-    localStorage.setItem("language", "en-us");
-    localStorage.setItem("languageEvent", 0);
-    window.location.reload();
-}
+    if (language == "en-us" && localStorage.getItem("languageEvent") == 1) {
+        switchLanguage();
+    } else if (language == "en-us") {
+        switchLanguage();
+    } else if (language == "pt-br") {
+        localStorage.setItem("language", "en-us");
+        localStorage.setItem("languageEvent", 0);
+        window.location.reload();
+    }
 });

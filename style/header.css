@@ -41,9 +41,9 @@
 .menu ul li:first-child {
     display: none;
     justify-content: end;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     height: fit-content;
     font-size: 40px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     padding-top: 10px;
     padding-right: 30px;
     padding-bottom: 10px;
@@ -54,20 +54,20 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: 0.4s;
     gap: 10px;
     cursor: pointer;
-    transition: 0.4s;
 }
 
 .mobileMenu ul li:last-child span {
     height: 8px;
     width: 70px;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     border-radius: 2px;
 }
 
 .mobileMenu ul li:last-child:active span {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 
 .menu ul li a, .mobileMenu ul li a {
@@ -80,12 +80,12 @@
     font-weight: bolder;
     text-transform: uppercase;
     text-decoration: none;
-    color: black;
+    color: rgb(0, 0, 0);
     padding-top: 15px;
 }
 
 .menu ul li a:active, .mobileMenu ul li a:active {
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 .tooltip {
@@ -96,8 +96,6 @@
     z-index: 4;
     position: fixed;
     display: block;
-    text-align: center;
-    visibility: hidden;
     height: fit-content;
     min-width: 60px;
     max-width: 130px;
@@ -105,6 +103,8 @@
     font-weight: normal;
     color: #fff;
     background-color: #222;
+    text-align: center;
+    visibility: hidden;
     opacity: 0.9;
     padding: 8px;
     border-radius: 6px;
@@ -126,7 +126,7 @@
 .menuPrincipalIcon {
     height: 100%;
     width: 60px;
-    background-image: url("../images/icon.png");
+    background-image: url("../images/logoBlack.png");
     background-size: cover;
     background-position-y: center;
     background-position-x: center;
@@ -134,7 +134,7 @@
 }
 
 .menu ul li a:active .menuPrincipalIcon, .mobileMenu ul li a:active .menuPrincipalIcon {
-    background-image: url("../images/icon1.4.png");
+    background-image: url("../images/logoWhite.png");
     background-size: cover;
     background-position-y: center;
     background-position-x: center;
@@ -170,10 +170,10 @@
         height: 100vh;
         width: 100%;
         left: 100vw;
+        color: rgb(255, 255, 255);
+        background-color: #222;
         -webkit-animation: none;
         animation: none;
-        color: white;
-        background-color: #222;
         opacity: 0.99;
         transition: 1s;
     }
@@ -204,16 +204,16 @@
     .menu ul li:first-child {
         display: flex;
         font-weight: bolder;
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid rgb(255, 255, 255);
     }
 
     .menu ul li:last-child {
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid rgb(255, 255, 255);
     }
 
     .menu ul li a {
         width: inherit;
-        color: white;
+        color: rgb(255, 255, 255);
     }
 
     .menu #menuPrincipal {
