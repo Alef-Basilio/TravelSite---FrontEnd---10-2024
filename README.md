@@ -23,7 +23,7 @@ Topics:
 
 <p align="center">
   <p align="center">
-    <img src="./public/assets/images/interface.png" width="100%">
+    <img src="./images/interface.jpg" width="100%">
   </p>
 </p>
 
@@ -35,8 +35,10 @@ JavaScript, HTML and CSS.
 <h2 id="how" align="center">How was made</h2>
 I implemented multiple components in each section, such as translation, adaptive layout, among others, so that the user has an engaging interaction with the elements.
 </br>
+I used many CSS features (hover, media, etc.) while maintaining visual cohesion in order to overcome the limits I learned from the courses with this markup language.
+</br>
 The varying responses of the components were a challenge for responsiveness, however, it was successfully achieved thanks to creative solutions such as the existence of two dynamic menus.
 
 
 <h2 id="obj" align="center">Objective</h2>
-I used many CSS features (hover, media, etc.) while maintaining visual cohesion in order to overcome the limits I learned from the courses with this markup language.
+Evolve my page styling limits.
