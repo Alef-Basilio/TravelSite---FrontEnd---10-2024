@@ -17,7 +17,7 @@ Topics:
 
 
 <p align="center">
-<b>An e-commerce where the user can browse the home page and see the products.</b>
+<b>An application that captures the user's attention with the possibilities for rest on the trips offered.</b>
 </p>
 
 
