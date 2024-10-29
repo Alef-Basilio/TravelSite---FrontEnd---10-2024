@@ -246,7 +246,7 @@
 
 @media (width < 400px) {
     .collectionAllItems {
-        height: 730px;
+        height: 880px;
     }
 
     .collectionItem {
@@ -260,7 +260,7 @@
     }
 
     .current-item {
-        height: 650px;
+        height: 880px;
         transition: 0.5s;
     }
 }
