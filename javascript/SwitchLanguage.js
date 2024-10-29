@@ -133,8 +133,8 @@ function placesDescription_2Changer([...pText]) {
 }
 
 placesDescription_2Changer(
-    ["Val di Funes é conhecido por sua beleza natural de tirar o fôlego, com vilas pitorescas, colinas ondulantes e montanhas imponentes. O vale é cercado pelos grupos de montanhas Odle e Geisler.", 
-    "A cidade sedia vários festivais ao longo do ano, incluindo a Festa della Madonna della Neve (Festa da Madonna da Neve) em agosto.",
+    ["O lugar é conhecido por sua beleza natural de tirar o fôlego, com vilas pitorescas, colinas ondulantes e montanhas imponentes. O vale é cercado pelos grupos de montanhas Odle e Geisler.", 
+    "Ela sedia vários festivais ao longo do ano, incluindo a Festa della Madonna della Neve (Festa da Madonna da Neve) em agosto.",
     "A Toscana é o berço do Renascimento e abriga vários marcos emblemáticos, incluindo a Torre Inclinada de Pisa, o Duomo de Florença e a cidade medieval de San Gimignano."]
 );
 

@@ -17,8 +17,8 @@
     background-position-y: top;
     background-position-x: center;
     background-repeat: no-repeat;
-	-webkit-animation: motion-simulation 220s ease-out infinite both;
-    animation: motion-simulation 220s ease-out infinite both;
+	-webkit-animation: vertical-motion-simulation 220s ease-out infinite both;
+    animation: vertical-motion-simulation 220s ease-out infinite both;
 }
 
 .introTitle {
@@ -160,7 +160,7 @@
     width: 47%;
 }
 
-@keyframes motion-simulation {
+@keyframes vertical-motion-simulation {
     0% {
         
         background-position-y: top;
@@ -189,6 +189,21 @@
     100% {
         opacity: 0.5;
     }
+}
+
+@keyframes horizontal-motion-simulation {
+    0% {
+        
+        background-position-x: left;
+    }
+    50% {
+        
+        background-position-x: right;
+    }
+    100% {
+        
+        background-position-x: left;
+      }
 }
 
 @media (width < 1200px) {
@@ -237,6 +252,13 @@
 
     .cardText {
         height: 240px;
+    }
+}
+
+@media (width < 850px) {
+    .introBackground {
+        -webkit-animation: horizontal-motion-simulation 220s ease-out infinite both;
+        animation: horizontal-motion-simulation 220s ease-out infinite both;
     }
 }
 
@@ -292,6 +314,10 @@
 }
 
 @media (width < 330px) {
+    .introTitle {
+        font-size: 50px;
+    }
+
     .introCard img {
         height: 230px;
     }

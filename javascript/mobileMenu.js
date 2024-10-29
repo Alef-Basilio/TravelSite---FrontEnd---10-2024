@@ -1,33 +1,33 @@
 const mobileMenuButton = document.querySelector(".mobileMenu ul").lastElementChild;
-const menut = document.querySelector(".menu");
-const menutClose = menut.firstElementChild;
+const mainMenu = document.querySelector(".menu");
+const mainMenuClose = mainMenu.firstElementChild.firstElementChild.firstElementChild;
 const navbar = document.querySelector(".navbar");
-let menutOpen = false;
+let mainMenuOpen = false;
 
 mobileMenuButton.addEventListener("click", () => {
     if (window.innerWidth < 1200) {
         mobileMenuButton.style.opacity = "0";
-        menut.style.left = "0";
-        menutOpen = true;
+        mainMenu.style.left = "0";
+        mainMenuOpen = true;
     }
 });
 
-menutClose.addEventListener("click", () => {
+mainMenuClose.addEventListener("click", () => {
     if (window.innerWidth < 1200) {
         mobileMenuButton.style.opacity = "1";
-        menut.style.left = "100vw";
-        menutOpen = false;
+        mainMenu.style.left = "100vw";
+        mainMenuOpen = false;
     }
 });
 
 setInterval(() => {
     if (window.innerWidth >= 1200) {
         mobileMenuButton.style.opacity = "0";
-        menut.style.display = "flex";
-        menut.style.left = "0";
-        menutOpen = false;
-    } else if (window.innerWidth < 1200 && !menutOpen) {
+        mainMenu.style.display = "flex";
+        mainMenu.style.left = "0";
+        mainMenuOpen = false;
+    } else if (window.innerWidth < 1200 && !mainMenuOpen) {
         mobileMenuButton.style.opacity = "1";
-        menut.style.left = "100vw";
+        mainMenu.style.left = "100vw";
     }
 }, 1);
