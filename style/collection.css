@@ -245,8 +245,13 @@
 }
 
 @media (width < 400px) {
+    .collection {
+        padding-bottom: 260px;
+    }
+
     .collectionAllItems {
-        height: 880px;
+        height: 900px;
+        padding-top: 100px;
     }
 
     .collectionItem {
@@ -260,14 +265,14 @@
     }
 
     .current-item {
-        height: 880px;
+        height: 710px;
         transition: 0.5s;
     }
 }
 
 @media (width < 350px) {
     .collectionAllItems {
-        height: 880px;
+        height: 980px;
     }
 
     .collectionItem {
